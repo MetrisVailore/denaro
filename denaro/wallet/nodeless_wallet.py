@@ -13,10 +13,10 @@ sys.path.insert(0, dir_path + "/../..")
 
 from denaro.wallet.utils import string_to_bytes
 from denaro.transactions import Transaction, TransactionOutput, TransactionInput
-from denaro.constants import CURVE
+from denaro.constants import CURVE, DEV_NODE
 from denaro.helpers import point_to_string, sha256, string_to_point
 
-NODE_URL = 'https://denaro-node.gaetano.eu.org'
+NODE_URL = DEV_NODE
 
 
 def get_address_info(address: str):
