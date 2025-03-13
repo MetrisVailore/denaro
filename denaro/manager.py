@@ -12,9 +12,9 @@ from .database import OLD_BLOCKS_TRANSACTIONS_ORDER
 from .helpers import sha256, timestamp, bytes_to_string, string_to_bytes
 from .transactions import CoinbaseTransaction, Transaction
 
-BLOCK_TIME = 180
-BLOCKS_COUNT = Decimal(500)
-START_DIFFICULTY = Decimal('6.0')
+BLOCK_TIME = 30
+BLOCKS_COUNT = Decimal(120)
+START_DIFFICULTY = Decimal('3.0')
 
 _print = print
 print = ic
