@@ -7,14 +7,13 @@ from typing import Tuple, List, Union
 from icecream import ic
 
 from . import Database
-from .constants import MAX_SUPPLY, ENDIAN, MAX_BLOCK_SIZE_HEX
+from .constants import MAX_SUPPLY, ENDIAN, MAX_BLOCK_SIZE_HEX, BLOCKS_DIFF_CHANGE, START_DIFF, BLOCK_TIME
 from .database import OLD_BLOCKS_TRANSACTIONS_ORDER
 from .helpers import sha256, timestamp, bytes_to_string, string_to_bytes
 from .transactions import CoinbaseTransaction, Transaction
 
-BLOCK_TIME = 30
-BLOCKS_COUNT = Decimal(120)
-START_DIFFICULTY = Decimal('3.0')
+BLOCKS_COUNT = BLOCKS_DIFF_CHANGE
+START_DIFFICULTY = START_DIFF
 
 _print = print
 print = ic
