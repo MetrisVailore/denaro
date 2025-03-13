@@ -8,7 +8,7 @@ CURVE = curve.P256
 # coin info
 SMALLEST = 1000000
 MAX_SUPPLY = 30_062_005
-BLOCK_TIME = 30
+BLOCK_TIME = 30 # seconds
 BLOCKS_DIFF_CHANGE = Decimal(120)
 START_DIFF = Decimal('3.0')
 VERSION = 1
