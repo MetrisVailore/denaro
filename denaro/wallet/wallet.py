@@ -13,7 +13,7 @@ sys.path.insert(0, dir_path + "/../..")
 from utils import create_transaction, string_to_bytes
 from denaro import Database, node
 
-from denaro.constants import CURVE
+from denaro.constants import CURVE, DEV_NODE
 from denaro.helpers import point_to_string, sha256
 
 Database.credentials = {
@@ -78,7 +78,7 @@ async def main():
         except Exception as e:
             print(f'Could not push transaction to local node: {e}')
             await denaro_database.add_pending_transaction(tx)
-            requests.get('https://denaro-node.gaetano.eu.org/push_tx', {'tx_hex': tx.hex()}, timeout=10)
+            requests.get(f'{DEV_NODE}/push_tx', {'tx_hex': tx.hex()}, timeout=10)
         print(f'Transaction pushed. Transaction hash: {sha256(tx.hex())}')
 
 
